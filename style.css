@@ -15,15 +15,16 @@ h1 {
 }
 .main {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    height: calc(100% - 67px);
 }
 #sideBar {
     display: flex;
     flex-direction: column;
     background-color: pink;
-    height: 100%;
-    width: 20%;
+    min-width: 20%;
+    flex-grow: 1;
     padding: 10px;
 }
 .searchBlock {
@@ -32,23 +33,20 @@ h1 {
 }
 .searchBar {
     display: flex;
+    max-width: 250px;
 }
 .citiesSaved {
-    display: flex;
-    flex-direction: column;
+    text-align: center;
 }
 .savedCity {
-    background-color: white;
-    border-style: solid;
-    border-width: 1px; 
-    border-color: black;   
+    background-color: white;  
 }
+
 .cityWeather {
     display: flex;
     flex-direction: column;
     background-color: rosybrown;
-    height: 100%;
-    width: 80%;
+    flex-grow: 4;
     padding: 10px;
 }
 .todaysWeather {
@@ -62,12 +60,13 @@ h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .card {
-   max-width: 200px;
-   min-width: 150px;
+    flex-shrink: 0;
+    max-width: 200px;
+    min-width: 200px;
 }
 
 /* h3 {
