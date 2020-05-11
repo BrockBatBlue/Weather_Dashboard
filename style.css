@@ -22,7 +22,7 @@ h1 {
 #sideBar {
     display: flex;
     flex-direction: column;
-    background-color: pink;
+    background-color:  rgb(233, 255, 237);
     min-width: 20%;
     flex-grow: 1;
     padding: 10px;
@@ -35,6 +35,12 @@ h1 {
     display: flex;
     max-width: 250px;
 }
+.searchInput {
+    border-radius: 5px 0 0 5px;
+}
+.searchButton {
+    border-radius: 0 5px 5px 0;
+}
 .citiesSaved {
     text-align: center;
 }
@@ -45,16 +51,17 @@ h1 {
 .cityWeather {
     display: flex;
     flex-direction: column;
-    background-color: rosybrown;
     flex-grow: 4;
     padding: 10px;
 }
 .todaysWeather {
-    background-color: whitesmoke;
     margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
 }
-.futureForecast {
-    background-color: turquoise;
+.todaysWeather > ul > li {
+    margin-top: 10px;
 }
 .forecastCards {
     display: flex;
@@ -67,6 +74,7 @@ h1 {
     flex-shrink: 0;
     max-width: 200px;
     min-width: 200px;
+    border-radius: 5px;
 }
 
 /* h3 {
