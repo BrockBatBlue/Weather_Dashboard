@@ -72,56 +72,8 @@ h1 {
     align-items: center;
 }
 .card {
-    flex-shrink: 0;
     max-width: 200px;
     min-width: 200px;
     border-radius: 5px;
+    margin: 5px;
 }
-
-/* h3 {
-    margin-left: 15px;
-    text-align: center;
-    width: 20%;
-}
-#sideBar {
-    display: flex;
-    position: relative;
-    top: 0;
-    width: 20%;
-    margin-left: 15px;
-    background-color: rgb(198, 255, 209);
-}
-#cityLine {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 20%;
-    margin-left: 15px;
-    background-color: rgb(198, 255, 209);
-    
-}
-.cityList {
-    border-width: 5px;
-    border-color: pink;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bolder;   
-}
-#weatherToday {
-    display: flex;
-    flex-direction: column;
-    border-width: 5px;
-    border-color: black;
-    position: fixed;
-    right: -10%;
-    width: 80%        
-}
-.forecast {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: fixed;
-    right: 57%;
-    top: 25%;  
-} */ 
