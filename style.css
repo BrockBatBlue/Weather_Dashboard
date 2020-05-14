@@ -45,6 +45,9 @@ h1 {
 .citiesSaved {
     text-align: center;
 }
+.tableButton{
+    cursor: pointer;
+}
 .savedCity {
     background-color: white;  
 }

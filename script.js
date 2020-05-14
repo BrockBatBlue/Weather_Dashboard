@@ -1,4 +1,14 @@
 var lastCity = localStorage.getItem("lastCity");
+var searchedCities = JSON.parse(localStorage.getItem("searchedCities"));
+
+var displaySearchedCities = function(searchedCities){
+    $(".citiesSaved").html("");
+    var tableBody = $(".citiesSaved").append("<tbody>");
+    for(i=0; i<searchedCities.length; i++){
+       var row = $("<tr>").append($("<td>").text(searchedCities[i]).addClass("tableButton"));
+       tableBody.append(row);
+    }
+}
 var displayWeather = function(weatherInfo){
     var name = weatherInfo.name
     var time = moment.unix(weatherInfo.dt).format("MMMM Do YYYY, h:mm:ss a")
@@ -31,8 +41,7 @@ var displayForecast = function(forecastInfo){
         $(".forecastCards").append(card);
     }
 }
-
-var getWeather = function (city){
+var getWeather = function(city){
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d8c80ace4b34f001fb4f2334a529a592&units=imperial";
     $.ajax({
         url: weatherURL,
@@ -41,28 +50,44 @@ var getWeather = function (city){
         displayWeather(response);
     });
 }
-
 var getForecast = function(city){
-    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=d8c80ace4b34f001fb4f2334a529a592&units=imperial&cnt=6";
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=d8c80ace4b34f001fb4f2334a529a592&units=imperial&cnt=5";
     $.ajax({
         url: forecastURL,
         method: "GET"
     }).then(function(response) {
-        console.log(response)
         displayForecast(response);
     });
 }
+
 if(lastCity !== null){
     // get data from last city
+    getWeather(lastCity);
+    getForecast(lastCity);
+    displaySearchedCities(searchedCities);
 }
+
 // Event Listeners Section 
 $(".searchButton").on("click", function(event) {
     //Grabbed city
     var cityName = $(".searchInput").val();
-    console.log(cityName);
     //Get city data
-    var cityWeather = getWeather(cityName);
-    var cityForecast = getForecast(cityName);
-    console.log(cityWeather);
+    getWeather(cityName);
+    getForecast(cityName);
+    lastCity = cityName
+    if(searchedCities === null){
+        searchedCities = [];
+    }
+    searchedCities.unshift(cityName);
+    localStorage.setItem("lastCity", cityName);
+    localStorage.setItem("searchedCities", JSON.stringify(searchedCities));
+    displaySearchedCities(searchedCities);
 })
-
+$(".tableButton").on("click", function(){
+    var cityName = $(this).text();
+    console.log(cityName);
+    getWeather(cityName);
+    getForecast(cityName);
+    lastCity = cityName;    
+    localStorage.setItem("lastCity", cityName);
+})
