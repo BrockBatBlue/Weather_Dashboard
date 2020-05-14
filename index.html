@@ -37,74 +37,23 @@
         </aside>
         <div class="cityWeather">
             <div class="todaysWeather">
-                <h4>Chicago 05/11/20</h4>
+                <h4 id="cityTime">-</h4>
                 <ul>
-                    <li>Temperature: 55 F</li>
-                    <li>Humidity: 44%</li>
-                    <li>Wind Speed: 65 MPH</li>
-                    <li>UV Index 3.5</li>
+                    <li>Temperature: <span id="degrees"></span> F</li>
+                    <li>Humidity: <span id="percentage"></span>%</li>
+                    <li>Wind Speed: <span id="mph"></span> MPH</li>
                 </ul>
             </div>
             <div class="futureForecast">
-                <h4>5-Day Forecast:</h4>
-                <div class="forecastCards">
-                    <div class="card">
-                        <div class="card-divider">
-                            <h5>5/11/2020</h5>                            
-                        </div>
-                        <div class="card-section">
-                        <p>🍕</p>
-                        <p>Temp: 48 F</p>
-                        <p>Humidity: 99%</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-divider">
-                            <h5>5/11/2020</h5>                            
-                        </div>
-                        <div class="card-section">
-                        <p>🍕</p>
-                        <p>Temp: 48 F</p>
-                        <p>Humidity: 99%</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-divider">
-                            <h5>5/11/2020</h5>                            
-                        </div>
-                        <div class="card-section">
-                        <p>🍕</p>
-                        <p>Temp: 48 F</p>
-                        <p>Humidity: 99%</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-divider">
-                            <h5>5/11/2020</h5>                            
-                        </div>
-                        <div class="card-section">
-                        <p>🍕</p>
-                        <p>Temp: 48 F</p>
-                        <p>Humidity: 99%</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-divider">
-                            <h5>5/11/2020</h5>                            
-                        </div>
-                        <div class="card-section">
-                        <p>🍕</p>
-                        <p>Temp: 48 F</p>
-                        <p>Humidity: 99%</p>
-                        </div>
-                    </div>                   
+                <h4>Weather Forecast:</h4>
+                <div class="forecastCards">      
                 </div>
             </div>
          </div>    
     </div> 
-    
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>   
 </body>
 </html>
