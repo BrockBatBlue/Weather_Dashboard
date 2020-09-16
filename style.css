@@ -45,6 +45,9 @@ h1 {
 .citiesSaved {
   text-align: center;
 }
+tbody {
+  background-color: rgba(255, 226, 214, 0.315);
+}
 .tableButton {
   cursor: pointer;
 }
