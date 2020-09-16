@@ -47,6 +47,7 @@ h1 {
 }
 tbody {
   background-color: rgba(255, 226, 214, 0.315);
+  font-weight: bolder;
 }
 .tableButton {
   cursor: pointer;
