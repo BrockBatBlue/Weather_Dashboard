@@ -89,6 +89,7 @@ tbody {
 }
 .card-section {
   background-color: rgb(204, 171, 137);
+  font-weight: bolder;
 }
 #cityTime {
   background-color: rgba(144, 238, 144, 0.315);
