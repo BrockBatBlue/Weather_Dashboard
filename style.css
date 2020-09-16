@@ -57,6 +57,7 @@ h1 {
   flex-direction: column;
   flex-grow: 4;
   padding: 10px;
+  background-color: rgba(255, 226, 214, 0.315);
 }
 .todaysWeather {
   margin-bottom: 10px;
