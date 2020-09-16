@@ -13,6 +13,9 @@ header {
 h1 {
   margin-bottom: 0;
 }
+h4 {
+  font-weight: bolder;
+}
 .main {
   display: flex;
   flex-wrap: wrap;
