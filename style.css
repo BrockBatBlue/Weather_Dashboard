@@ -84,6 +84,9 @@ tbody {
   border-radius: 5px;
   margin: 5px;
 }
+.card-divider {
+  background-color: rgba(144, 238, 144, 0.315);
+}
 #cityTime {
-  background-color: rgba(144, 238, 144, 0.109);
+  background-color: rgba(144, 238, 144, 0.315);
 }
