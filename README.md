@@ -6,6 +6,12 @@ It also saves the previously searched city and allows the user to click on that 
 
 This uses openweathermap api and momentjs api.
 
+This allows the user to find the current and forecasted weather in any city.
+
 ## Site Image
 
 ![Weather Dashboard](assets/weatherDashboard.jpg)
+
+## Deployed Site
+
+https://brockbatblue.github.io/Weather_Dashboard/
